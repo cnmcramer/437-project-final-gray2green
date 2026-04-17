@@ -1296,3 +1296,10 @@ footer {
 .nav-phone { color: var(--white) !important; font-size: 0.95rem !important; }
 .nav-logo { font-size: 1.6rem !important; }
 .nav-cta { gap: 20px !important; }
+
+/* ─── NAV LOGO CONSISTENCY FIXES ─── */
+.nav-logo .nav-gray { color: #888888; }
+.nav-logo .nav-logo-sep { color: var(--white); }
+.nav-logo span:last-child { color: var(--green-light); }
+.nav-logo { font-size: 1.75rem !important; gap: 2px !important; letter-spacing: -0.02em; }
+.nav-logo-leaf { display: none !important; }
