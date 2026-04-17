@@ -1,29 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Gray to Green</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Gray to Green Landscaping</title>
+  <meta name="description" content="Contact Gray to Green Landscaping in Metro Detroit. Call 248-412-3767, email us, or schedule an appointment online." />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Gray to Green</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/quote">Quote</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
 
-  <main class="container">
-    <h2>Contact Us</h2>
-    <p>Phone: 248-412-3767</p>
-    <p>Email: graytogreen.services@gmail.com</p>
-    <p>Service Area: Metro Detroit, including areas near Royal Oak.</p>
-    <p>Ready to improve your yard? Reach out today for a free quote.</p>
-  </main>
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-leaf">🌿</span>
+      Gray <span>&nbsp;to Green</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:2484123767" class="nav-phone">📞 248-412-3767</a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:2484123767">📞 248-412-3767</a>
+  </div>
+</nav>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<div class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Reach out any time. We're always happy to talk through your project.</p>
+  </div>
+</div>
+
+<!-- ═══ CONTACT LAYOUT ═══ -->
+<section class="section contact-full">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: Contact Info + Socials -->
+      <div class="contact-info-section">
+        <h2>Get In Touch</h2>
+        <p>
+          The best way to reach us is by phone or text — we respond fast. You can also email us
+          or fill out the appointment form and we'll get back to you within 24 hours.
+        </p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div>
+              <h4>Call or Text</h4>
+              <a href="tel:2484123767">248-412-3767</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:graytogreen.services@gmail.com">graytogreen.services@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <h4>Service Area</h4>
+              <p>Metro Detroit, MI — based near Royal Oak</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-section">
+          <h4>Follow Our Work</h4>
+          <div class="social-grid">
+            <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="social-card">
+              <span class="social-card-icon">⭐</span>
+              Google Reviews
+            </a>
+            <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="social-card">
+              <span class="social-card-icon">📸</span>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="social-card">
+              <span class="social-card-icon">📘</span>
+              Facebook
+            </a>
+            <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="social-card">
+              <span class="social-card-icon">🎵</span>
+              TikTok
+            </a>
+          </div>
+        </div>
+
+        <!-- Appointment Form -->
+        <div style="margin-top:48px;">
+          <h3 style="font-size:1.4rem; margin-bottom:8px;">Schedule an Appointment</h3>
+          <p style="color:var(--gray-text); font-size:0.9rem; margin-bottom:28px;">
+            Ready to book? Fill out the form below and we'll confirm your appointment.
+          </p>
+
+          <form id="appointmentForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name <span style="color:var(--green-light)">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span style="color:var(--green-light)">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="248-555-1234" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Property Address</label>
+              <input type="text" id="address" name="address" placeholder="123 Main St, Royal Oak, MI" />
+            </div>
+
+            <div class="form-group">
+              <label for="serviceId">Service Needed <span style="color:var(--green-light)">*</span></label>
+              <select id="serviceId" name="serviceId" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="mulch-installation">Mulch Installation</option>
+                <option value="lawn-care">Lawn Care & Maintenance</option>
+                <option value="landscape-design">Landscape Design</option>
+                <option value="hardscaping">Hardscaping</option>
+                <option value="tree-shrub-trimming">Tree & Shrub Trimming</option>
+                <option value="clean-ups">Fall & Spring Clean-Ups</option>
+                <option value="rock-stone">Rock & Stone Installation</option>
+                <option value="sod-installation">Sod Installation</option>
+                <option value="other">Other / Multiple Services</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointmentDate">Preferred Date <span style="color:var(--green-light)">*</span></label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required />
+              </div>
+              <div class="form-group">
+                <label for="appointmentTime">Preferred Time</label>
+                <select id="appointmentTime" name="appointmentTime">
+                  <option value="" disabled selected>Select time...</option>
+                  <option value="8:00 AM">8:00 AM</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notes or Gate Code</label>
+              <textarea id="notes" name="notes" placeholder="Anything we should know? Gate code, specific access info, special instructions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:16px;">Request Appointment</button>
+            <div class="form-message" id="apptMessage"></div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT: Service Area Box -->
+      <div>
+        <div class="contact-map-box">
+          <h3>Our Service Area</h3>
+          <p>Based near Royal Oak, we serve all of Metro Detroit and surrounding communities.</p>
+
+          <div class="areas-list">
+            <span class="area-pill home">★ Royal Oak</span>
+            <span class="area-pill">Birmingham</span>
+            <span class="area-pill">Berkley</span>
+            <span class="area-pill">Clawson</span>
+            <span class="area-pill">Troy</span>
+            <span class="area-pill">Madison Heights</span>
+            <span class="area-pill">Hazel Park</span>
+            <span class="area-pill">Ferndale</span>
+            <span class="area-pill">Oak Park</span>
+            <span class="area-pill">Pleasant Ridge</span>
+            <span class="area-pill">Huntington Woods</span>
+            <span class="area-pill">Southfield</span>
+            <span class="area-pill">Bloomfield Hills</span>
+            <span class="area-pill">West Bloomfield</span>
+            <span class="area-pill">Pontiac</span>
+            <span class="area-pill">Waterford</span>
+            <span class="area-pill">Auburn Hills</span>
+            <span class="area-pill">Rochester Hills</span>
+            <span class="area-pill">Sterling Heights</span>
+            <span class="area-pill">Warren</span>
+            <span class="area-pill">Grosse Pointe</span>
+            <span class="area-pill">Detroit</span>
+            <span class="area-pill">Livonia</span>
+            <span class="area-pill">Farmington Hills</span>
+            <span class="area-pill">Novi</span>
+          </div>
+
+          <p style="color:var(--gray-text); font-size:0.85rem; margin-bottom:24px;">
+            Don't see your city? Give us a call — we likely serve your area.
+          </p>
+
+          <a href="tel:2484123767" class="btn btn-primary" style="width:100%; margin-bottom:12px;">📞 Call 248-412-3767</a>
+          <a href="quote.html" class="btn btn-outline" style="width:100%;">Get a Free Quote</a>
+        </div>
+
+        <!-- Quick CTA box -->
+        <div style="background:var(--charcoal); border:1px solid rgba(45,122,45,0.2); border-radius:12px; padding:32px 28px; margin-top:24px; text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:12px;">🌿</div>
+          <h3 style="font-size:1.3rem; margin-bottom:10px;">No Job Too Small</h3>
+          <p style="color:var(--gray-text); font-size:0.9rem; margin-bottom:20px;">
+            Whether it's a single bed or a full yard transformation — we'd love to help.
+          </p>
+          <a href="quote.html" class="btn btn-primary" style="width:100%;">Get a Free Estimate</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Gray to <span>Green</span></h3>
+        <p>Professional landscaping services for homes and businesses across Metro Detroit. Reliable, affordable, and always on time.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="social-link">📸</a>
+          <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="social-link">📘</a>
+          <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="social-link">🎵</a>
+          <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="social-link">⭐</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Mulch Installation</a></li>
+          <li><a href="services.html">Lawn Care</a></li>
+          <li><a href="services.html">Landscape Design</a></li>
+          <li><a href="services.html">Hardscaping</a></li>
+          <li><a href="services.html">Tree & Shrub Trimming</a></li>
+          <li><a href="services.html">Clean-Ups</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2484123767">📞 248-412-3767</a></li>
+          <li><a href="mailto:graytogreen.services@gmail.com">✉️ Email Us</a></li>
+          <li><a href="quote.html">📋 Free Quote</a></li>
+          <li><a href="gallery.html">🖼 Our Work</a></li>
+          <li><a href="contact.html">📍 Service Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="green">Gray to Green Landscaping</span>. All rights reserved.</p>
+      <p>Serving Metro Detroit, MI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/main.js"></script>
 </body>
 </html>

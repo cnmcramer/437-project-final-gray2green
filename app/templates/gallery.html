@@ -1,47 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Gray to Green</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Gray to Green Landscaping</title>
+  <meta name="description" content="See real before & after landscaping projects by Gray to Green in Metro Detroit — mulch, hardscaping, lawn care, landscape design, and more." />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Gray to Green</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/quote">Quote</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Our Work</h2>
-      <p>Browse examples of landscaping and lawn care projects.</p>
-    </section>
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-leaf">🌿</span>
+      Gray <span>&nbsp;to Green</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:2484123767" class="nav-phone">📞 248-412-3767</a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:2484123767">📞 248-412-3767</a>
+  </div>
+</nav>
 
-    <section>
-      <div id="galleryGrid" class="gallery-grid">
-        <div class="gallery-card">
-          <img src="/static/images/placeholder1.jpg" alt="Placeholder image">
-          <p>Project example</p>
+<!-- ═══ PAGE HEADER ═══ -->
+<div class="page-header">
+  <div class="container">
+    <h1>Our Work</h1>
+    <p>Real Metro Detroit properties. Real results. Before & after transformations.</p>
+  </div>
+</div>
+
+<!-- ═══ GALLERY ═══ -->
+<section class="section gallery-full">
+  <div class="container">
+
+    <!-- Filter bar -->
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="mulch">Mulch</button>
+      <button class="filter-btn" data-filter="design">Landscape Design</button>
+      <button class="filter-btn" data-filter="hardscape">Hardscaping</button>
+      <button class="filter-btn" data-filter="cleanup">Clean-Ups</button>
+      <button class="filter-btn" data-filter="trimming">Trimming</button>
+    </div>
+
+    <!-- Gallery masonry grid — loaded by JS from /api/gallery, falls back to placeholders -->
+    <div class="gallery-masonry" id="galleryGrid">
+
+      <!-- Static placeholders — will be replaced by JS if API is available -->
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <div class="gallery-placeholder" style="height:280px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Mulch Installation</div>
         </div>
-        <div class="gallery-card">
-          <img src="/static/images/placeholder2.jpg" alt="Placeholder image">
-          <p>Project example</p>
-        </div>
-        <div class="gallery-card">
-          <img src="/static/images/placeholder3.jpg" alt="Placeholder image">
-          <p>Project example</p>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Mulch Installation</div>
+          <div class="gallery-label-title">Front Bed Mulch & Rock Border</div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <script src="/static/js/main.js"></script>
+      <div class="gallery-masonry-item" data-category="design">
+        <span class="before-after-badge">Before & After</span>
+        <div class="gallery-placeholder" style="height:200px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Landscape Design</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Landscape Design</div>
+          <div class="gallery-label-title">Flower Bed Refresh</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="hardscape">
+        <span class="before-after-badge">Before & After</span>
+        <div class="gallery-placeholder" style="height:320px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Hardscaping</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Hardscaping</div>
+          <div class="gallery-label-title">Paver Patio Installation</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <div class="gallery-placeholder" style="height:240px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Mulch Installation</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Mulch Installation</div>
+          <div class="gallery-label-title">Tree Line Mulch Bed</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="cleanup">
+        <div class="gallery-placeholder" style="height:200px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Spring Clean-Up</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Clean-Up</div>
+          <div class="gallery-label-title">Spring Yard Cleanup</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="design">
+        <span class="before-after-badge">Before & After</span>
+        <div class="gallery-placeholder" style="height:260px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Landscape Design</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Landscape Design</div>
+          <div class="gallery-label-title">Front Bed Redesign</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="trimming">
+        <div class="gallery-placeholder" style="height:220px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Shrub Trimming</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Trimming</div>
+          <div class="gallery-label-title">Shrub Shaping & Edging</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="hardscape">
+        <div class="gallery-placeholder" style="height:200px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Rock Installation</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Rock Installation</div>
+          <div class="gallery-label-title">Walkway & Stone Border</div>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <div class="gallery-placeholder" style="height:300px;">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Mulch Installation</div>
+        </div>
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Mulch Installation</div>
+          <div class="gallery-label-title">Side Yard Bed Overhaul</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:52px;">
+      <p style="color:var(--gray-text); margin-bottom:20px;">
+        Want results like these? We'd love to help with your project.
+      </p>
+      <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Gray to <span>Green</span></h3>
+        <p>Professional landscaping services for homes and businesses across Metro Detroit. Reliable, affordable, and always on time.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="social-link">📸</a>
+          <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="social-link">📘</a>
+          <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="social-link">🎵</a>
+          <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="social-link">⭐</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Mulch Installation</a></li>
+          <li><a href="services.html">Lawn Care</a></li>
+          <li><a href="services.html">Landscape Design</a></li>
+          <li><a href="services.html">Hardscaping</a></li>
+          <li><a href="services.html">Tree & Shrub Trimming</a></li>
+          <li><a href="services.html">Clean-Ups</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2484123767">📞 248-412-3767</a></li>
+          <li><a href="mailto:graytogreen.services@gmail.com">✉️ Email Us</a></li>
+          <li><a href="quote.html">📋 Free Quote</a></li>
+          <li><a href="gallery.html">🖼 Our Work</a></li>
+          <li><a href="contact.html">📍 Service Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="green">Gray to Green Landscaping</span>. All rights reserved.</p>
+      <p>Serving Metro Detroit, MI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/main.js"></script>
 </body>
 </html>

@@ -1,66 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gray to Green</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gray to Green Landscaping — Metro Detroit</title>
+  <meta name="description" content="Professional landscaping services in Metro Detroit. Mulch installation, lawn care, hardscaping, landscape design & more. Free estimates. Call 248-412-3767." />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Gray to Green</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/quote">Quote</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h2>Turning Gray Spaces Green</h2>
-      <p>Professional landscaping and lawn care in Metro Detroit.</p>
-      <a class="button" href="/quote">Get a Free Quote</a>
-    </section>
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-leaf">🌿</span>
+      Gray <span>&nbsp;to Green</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:2484123767" class="nav-phone">📞 248-412-3767</a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:2484123767">📞 248-412-3767</a>
+  </div>
+</nav>
 
-    <section class="container">
-      <h2>Our Services</h2>
-      <div id="servicesPreview" class="card-grid">
-        <div class="card">Loading services...</div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2>Why Choose Us</h2>
-      <div class="card-grid">
-        <div class="card">Locally owned & operated</div>
-        <div class="card">Reliable and on-time service</div>
-        <div class="card">Affordable pricing</div>
-        <div class="card">Attention to detail</div>
-        <div class="card">Free estimates</div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2>Contact</h2>
-      <p>Phone: 248-412-3767</p>
-      <p>Email: graytogreen.services@gmail.com</p>
-      <p>Serving Metro Detroit and areas near Royal Oak.</p>
-    </section>
-
-    <section class="container">
-      <h2>Follow Us</h2>
-      <p>
-        <a href="#">Google Page</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">Facebook</a> |
-        <a href="#">TikTok</a>
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-up fade-up-1">Metro Detroit's Landscaping Pros</div>
+      <h1 class="fade-up fade-up-2">
+        Turning <span class="gray-word">Gray</span><br>
+        Spaces <span class="green-word">Green</span>
+      </h1>
+      <p class="hero-sub fade-up fade-up-3">
+        Reliable. Affordable. High-quality lawn care and landscaping
+        for homes and businesses across Metro Detroit.
       </p>
-    </section>
-  </main>
+      <p class="hero-tagline fade-up fade-up-3">No job is too small for us to take on.</p>
+      <div class="hero-buttons fade-up fade-up-4">
+        <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+        <a href="gallery.html" class="btn btn-outline">View Our Work</a>
+      </div>
+      <div class="hero-badges fade-up fade-up-4">
+        <div class="hero-badge">
+          <span class="hero-badge-num">100%</span>
+          <span class="hero-badge-label">Free Estimates</span>
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-num">8+</span>
+          <span class="hero-badge-label">Services Offered</span>
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-num">Local</span>
+          <span class="hero-badge-label">Owned & Operated</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="/static/js/main.js"></script>
+<!-- ═══ CONTACT STRIP ═══ -->
+<div class="contact-strip">
+  <div class="container">
+    <div class="contact-strip-inner">
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <div>
+          <div class="contact-item-label">Call or Text</div>
+          <a href="tel:2484123767" class="contact-item-value">248-412-3767</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div>
+          <div class="contact-item-label">Email Us</div>
+          <a href="mailto:graytogreen.services@gmail.com" class="contact-item-value">graytogreen.services@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div>
+          <div class="contact-item-label">Service Area</div>
+          <span class="contact-item-value">Metro Detroit, MI</span>
+        </div>
+      </div>
+      <a href="quote.html" class="btn btn-primary">Request a Free Estimate</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES PREVIEW ═══ -->
+<section class="section services-preview">
+  <div class="container">
+    <div class="section-title">Our Services</div>
+    <p class="section-subtitle">
+      From full landscape transformations to routine maintenance — we do it all, and we do it right.
+    </p>
+    <div class="services-grid" id="servicesPreview">
+      <!-- Loaded dynamically from /api/services or JS fallback -->
+      <div class="service-card">
+        <span class="service-icon">🍂</span>
+        <h3>Mulch Installation</h3>
+        <p>Fresh mulch to protect plants, suppress weeds, and give your beds a clean look.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🌿</span>
+        <h3>Lawn Care & Maintenance</h3>
+        <p>Mowing, edging, trimming, and seasonal upkeep to keep your yard sharp all year.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏡</span>
+        <h3>Landscape Design</h3>
+        <p>Custom plans that transform your outdoor space into something beautiful.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🪨</span>
+        <h3>Hardscaping</h3>
+        <p>Patios, walkways, and stone features that add structure and value.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🍁</span>
+        <h3>Fall & Spring Clean-Ups</h3>
+        <p>Seasonal cleanup to prep for winter or wake your yard up for spring.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">✂️</span>
+        <h3>Tree & Shrub Trimming</h3>
+        <p>Expert pruning to keep your trees and shrubs healthy and looking great.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="services.html" class="btn btn-outline">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CHOOSE US ═══ -->
+<section class="section why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-title">Why Choose Us</div>
+        <p class="section-subtitle">
+          We're not just another lawn crew — we take pride in every job, big or small.
+        </p>
+        <div class="why-items">
+          <div class="why-item">
+            <div class="why-icon">🏠</div>
+            <div>
+              <h4>Locally Owned & Operated</h4>
+              <p>We're your neighbors. We care about this community and the properties we work on.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">⏰</div>
+            <div>
+              <h4>Reliable & On-Time</h4>
+              <p>We show up when we say we will. No excuses, no no-shows.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">💰</div>
+            <div>
+              <h4>Affordable Pricing</h4>
+              <p>Competitive rates without cutting corners. Quality work you can actually afford.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🔍</div>
+            <div>
+              <h4>Attention to Detail</h4>
+              <p>We treat every property like it's our own. The details matter to us.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">📋</div>
+            <div>
+              <h4>Free Estimates</h4>
+              <p>No pressure, no commitment. Get a quote and see what we can do for you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="why-cta-box">
+          <h3>Ready to Transform Your Yard?</h3>
+          <p>Get in touch today for a free estimate. No job is too small — we'd love to help.</p>
+          <a href="quote.html" class="btn btn-primary" style="margin-bottom:16px; width:100%;">Get a Free Quote</a>
+          <a href="tel:2484123767" class="btn btn-ghost" style="width:100%;">📞 Call 248-412-3767</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY PREVIEW ═══ -->
+<section class="section gallery-preview">
+  <div class="container">
+    <div class="section-title">Our Work</div>
+    <p class="section-subtitle">Real before & after results from Metro Detroit properties.</p>
+    <div class="gallery-grid-preview">
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Mulch & Rock Installation</div>
+        </div>
+        <div class="gallery-overlay"><span>Mulch Installation</span></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Landscape Design</div>
+        </div>
+        <div class="gallery-overlay"><span>Landscape Design</span></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Hardscaping</div>
+        </div>
+        <div class="gallery-overlay"><span>Hardscaping</span></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Spring Clean-Up</div>
+        </div>
+        <div class="gallery-overlay"><span>Spring Clean-Up</span></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-label">Tree Trimming</div>
+        </div>
+        <div class="gallery-overlay"><span>Tree Trimming</span></div>
+      </div>
+    </div>
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn btn-outline">See Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOCIAL / REVIEW CTA ═══ -->
+<section class="section" style="background: var(--charcoal-dark); padding: 60px 0;">
+  <div class="container" style="text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:12px;">Follow Our Work</h2>
+    <p style="color:var(--gray-text); margin-bottom:36px; max-width:500px; margin-left:auto; margin-right:auto;">
+      See the latest projects, tips, and transformations on our social pages.
+    </p>
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="btn btn-primary">⭐ Review Us on Google</a>
+      <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="btn btn-ghost">📸 Instagram</a>
+      <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="btn btn-ghost">📘 Facebook</a>
+      <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="btn btn-ghost">🎵 TikTok</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Gray to <span>Green</span></h3>
+        <p>Professional landscaping services for homes and businesses across Metro Detroit. Reliable, affordable, and always on time.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="social-link" title="Instagram">📸</a>
+          <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="social-link" title="Facebook">📘</a>
+          <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="social-link" title="TikTok">🎵</a>
+          <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="social-link" title="Google">⭐</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Mulch Installation</a></li>
+          <li><a href="services.html">Lawn Care</a></li>
+          <li><a href="services.html">Landscape Design</a></li>
+          <li><a href="services.html">Hardscaping</a></li>
+          <li><a href="services.html">Tree & Shrub Trimming</a></li>
+          <li><a href="services.html">Clean-Ups</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2484123767">📞 248-412-3767</a></li>
+          <li><a href="mailto:graytogreen.services@gmail.com">✉️ Email Us</a></li>
+          <li><a href="quote.html">📋 Free Quote</a></li>
+          <li><a href="gallery.html">🖼 Our Work</a></li>
+          <li><a href="contact.html">📍 Service Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="green">Gray to Green Landscaping</span>. All rights reserved.</p>
+      <p>Serving Metro Detroit, MI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/main.js"></script>
 </body>
 </html>

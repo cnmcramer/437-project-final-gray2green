@@ -1,31 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Gray to Green</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Gray to Green Landscaping</title>
+  <meta name="description" content="Landscaping services in Metro Detroit: mulch installation, lawn care, hardscaping, landscape design, tree trimming, clean-ups, rock installation, and sod." />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Gray to Green</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/quote">Quote</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
 
-  <main class="container">
-    <h2>Our Services</h2>
-    <div id="servicesList" class="card-grid">
-      <div class="card">Loading services...</div>
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-leaf">🌿</span>
+      Gray <span>&nbsp;to Green</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:2484123767" class="nav-phone">📞 248-412-3767</a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
     </div>
-  </main>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:2484123767">📞 248-412-3767</a>
+  </div>
+</nav>
 
-  <script src="/static/js/main.js"></script>
+<!-- ═══ PAGE HEADER ═══ -->
+<div class="page-header">
+  <div class="container">
+    <h1>Our Services</h1>
+    <p>Everything your lawn and landscape needs — no job too small.</p>
+  </div>
+</div>
+
+<!-- ═══ SERVICES GRID ═══ -->
+<section class="section services-full">
+  <div class="container">
+    <div class="services-full-grid">
+
+      <div class="service-full-card fade-up fade-up-1">
+        <div class="service-full-icon">🍂</div>
+        <h3>Mulch Installation</h3>
+        <p>Fresh mulch installation is one of the best investments you can make for your garden beds. It protects your plants' root systems, retains moisture, suppresses weeds, and gives your property a clean, professionally finished look.</p>
+        <span class="service-tag">Most Popular</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-2">
+        <div class="service-full-icon">🌿</div>
+        <h3>Lawn Care & Maintenance</h3>
+        <p>Consistent lawn care is what separates a good yard from a great one. We handle regular mowing, edging, trimming, and all the seasonal maintenance tasks that keep your lawn looking sharp year-round.</p>
+        <span class="service-tag">Year-Round</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-3">
+        <div class="service-full-icon">🏡</div>
+        <h3>Landscape Design</h3>
+        <p>Your outdoor space should reflect your vision. We work with you to design and install custom landscapes — from plant selection and bed layout to hardscape integration — that are both beautiful and built to last.</p>
+        <span class="service-tag">Custom</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-1">
+        <div class="service-full-icon">🪨</div>
+        <h3>Hardscaping</h3>
+        <p>Patios, walkways, retaining walls, and decorative stone features that add lasting structure and curb appeal to your property. We install pavers, natural stone, brick, and more with careful attention to grading and drainage.</p>
+        <span class="service-tag">Premium</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-2">
+        <div class="service-full-icon">✂️</div>
+        <h3>Tree & Shrub Trimming</h3>
+        <p>Overgrown trees and shrubs can make even a nice yard look neglected. Our trimming and pruning services keep your plantings healthy, shaped, and looking intentional — not wild.</p>
+        <span class="service-tag">Seasonal</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-3">
+        <div class="service-full-icon">🍁</div>
+        <h3>Fall & Spring Clean-Ups</h3>
+        <p>Seasonal clean-ups are essential for a healthy yard. We handle leaf removal, debris cleanup, bed clearing, and everything else needed to prep your property for winter or get it ready to shine in spring.</p>
+        <span class="service-tag">Seasonal</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-1">
+        <div class="service-full-icon">⛰️</div>
+        <h3>Rock & Stone Installation</h3>
+        <p>Decorative rock, river stone, pea gravel, and boulders for edging, drainage beds, pathways, and low-maintenance landscaping. We source quality materials and install them properly for long-lasting results.</p>
+        <span class="service-tag">Design</span>
+      </div>
+
+      <div class="service-full-card fade-up fade-up-2">
+        <div class="service-full-icon">🌱</div>
+        <h3>Sod Installation</h3>
+        <p>Need a new lawn fast? We handle full sod installation including site prep, grading, laying, and initial care guidance — so you get a lush, established lawn without waiting for seed to grow.</p>
+        <span class="service-tag">Transform</span>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:56px;">
+      <p style="color:var(--gray-text); margin-bottom:20px; font-size:1rem;">Not sure which service you need? Just reach out — we're happy to help figure it out.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+        <a href="tel:2484123767" class="btn btn-outline">📞 Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE AREAS ═══ -->
+<section class="section service-areas">
+  <div class="container">
+    <div class="section-title">Service Areas</div>
+    <p class="section-subtitle">Proudly serving Royal Oak and all surrounding communities across Metro Detroit.</p>
+    <div class="areas-grid">
+      <div class="area-tag featured">★ Royal Oak</div>
+      <div class="area-tag">Birmingham</div>
+      <div class="area-tag">Berkley</div>
+      <div class="area-tag">Clawson</div>
+      <div class="area-tag">Troy</div>
+      <div class="area-tag">Madison Heights</div>
+      <div class="area-tag">Hazel Park</div>
+      <div class="area-tag">Ferndale</div>
+      <div class="area-tag">Oak Park</div>
+      <div class="area-tag">Pleasant Ridge</div>
+      <div class="area-tag">Huntington Woods</div>
+      <div class="area-tag">Southfield</div>
+      <div class="area-tag">Bloomfield Hills</div>
+      <div class="area-tag">Bloomfield Township</div>
+      <div class="area-tag">West Bloomfield</div>
+      <div class="area-tag">Pontiac</div>
+      <div class="area-tag">Waterford</div>
+      <div class="area-tag">Auburn Hills</div>
+      <div class="area-tag">Rochester Hills</div>
+      <div class="area-tag">Rochester</div>
+      <div class="area-tag">Sterling Heights</div>
+      <div class="area-tag">Warren</div>
+      <div class="area-tag">Roseville</div>
+      <div class="area-tag">St. Clair Shores</div>
+      <div class="area-tag">Grosse Pointe</div>
+      <div class="area-tag">Detroit</div>
+      <div class="area-tag">Livonia</div>
+      <div class="area-tag">Farmington Hills</div>
+      <div class="area-tag">Novi</div>
+    </div>
+    <p style="color:var(--gray-text); margin-top:24px; font-size:0.9rem;">
+      Not seeing your city? Give us a call — we likely serve your area too.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Gray to <span>Green</span></h3>
+        <p>Professional landscaping services for homes and businesses across Metro Detroit. Reliable, affordable, and always on time.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="social-link">📸</a>
+          <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="social-link">📘</a>
+          <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="social-link">🎵</a>
+          <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="social-link">⭐</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Mulch Installation</a></li>
+          <li><a href="services.html">Lawn Care</a></li>
+          <li><a href="services.html">Landscape Design</a></li>
+          <li><a href="services.html">Hardscaping</a></li>
+          <li><a href="services.html">Tree & Shrub Trimming</a></li>
+          <li><a href="services.html">Clean-Ups</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2484123767">📞 248-412-3767</a></li>
+          <li><a href="mailto:graytogreen.services@gmail.com">✉️ Email Us</a></li>
+          <li><a href="quote.html">📋 Free Quote</a></li>
+          <li><a href="gallery.html">🖼 Our Work</a></li>
+          <li><a href="contact.html">📍 Service Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="green">Gray to Green Landscaping</span>. All rights reserved.</p>
+      <p>Serving Metro Detroit, MI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/main.js"></script>
 </body>
 </html>
-

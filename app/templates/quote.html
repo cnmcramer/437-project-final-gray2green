@@ -1,80 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get a Quote - Gray to Green</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Free Quote — Gray to Green Landscaping</title>
+  <meta name="description" content="Request a free landscaping quote from Gray to Green. Serving Metro Detroit. Fill out the form or call 248-412-3767." />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Gray to Green</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/quote">Quote</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Request a Free Quote</h2>
-      <p>Tell us about your project and we’ll get back to you.</p>
-    </section>
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-leaf">🌿</span>
+      Gray <span>&nbsp;to Green</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quote.html" class="active">Get a Quote</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:2484123767" class="nav-phone">📞 248-412-3767</a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:2484123767">📞 248-412-3767</a>
+  </div>
+</nav>
 
-    <section class="form-section">
-      <form id="quoteForm" enctype="multipart/form-data">
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" required>
+<!-- ═══ PAGE HEADER ═══ -->
+<div class="page-header">
+  <div class="container">
+    <h1>Get a Free Quote</h1>
+    <p>Tell us about your project and we'll get back to you quickly. No pressure, ever.</p>
+  </div>
+</div>
 
-        <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone" required>
+<!-- ═══ QUOTE FORM ═══ -->
+<section class="section quote-section">
+  <div class="container">
+    <div class="quote-layout">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+      <!-- FORM -->
+      <div class="quote-form-wrap">
+        <h2 style="font-size:1.6rem; margin-bottom:8px;">Request a Quote</h2>
+        <p style="color:var(--gray-text); font-size:0.92rem; margin-bottom:32px;">
+          Fill out the form below and we'll reach out within 24 hours to discuss your project and schedule a free estimate.
+        </p>
 
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" required>
+        <form id="quoteForm" novalidate>
 
-        <label for="serviceId">Service Needed</label>
-        <select id="serviceId" name="serviceId" required>
-          <option value="">Select a service</option>
-          <option value="mulch-installation">Mulch Installation</option>
-          <option value="lawn-care">Lawn Care & Maintenance</option>
-          <option value="landscape-design">Landscape Design</option>
-          <option value="hardscaping">Hardscaping</option>
-          <option value="tree-shrub-trimming">Tree & Shrub Trimming</option>
-          <option value="cleanups">Fall & Spring Clean-Ups</option>
-          <option value="rock-stone-installation">Rock & Stone Installation</option>
-          <option value="sod-installation">Sod Installation</option>
-        </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span style="color:var(--green-light)">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:var(--green-light)">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="248-555-1234" required />
+            </div>
+          </div>
 
-        <label for="lawnSize">Lawn Size</label>
-        <select id="lawnSize" name="lawnSize">
-          <option value="">Select size</option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:var(--green-light)">*</span></label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
 
-        <label for="description">Project Description</label>
-        <textarea id="description" name="description" rows="5" required></textarea>
+          <div class="form-group">
+            <label for="address">Property Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, Royal Oak, MI 48067" />
+          </div>
 
-        <label for="preferredDate">Preferred Date</label>
-        <input type="date" id="preferredDate" name="preferredDate">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="serviceId">Service Needed <span style="color:var(--green-light)">*</span></label>
+              <select id="serviceId" name="serviceId" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="mulch-installation">Mulch Installation</option>
+                <option value="lawn-care">Lawn Care & Maintenance</option>
+                <option value="landscape-design">Landscape Design</option>
+                <option value="hardscaping">Hardscaping</option>
+                <option value="tree-shrub-trimming">Tree & Shrub Trimming</option>
+                <option value="clean-ups">Fall & Spring Clean-Ups</option>
+                <option value="rock-stone">Rock & Stone Installation</option>
+                <option value="sod-installation">Sod Installation</option>
+                <option value="other">Other / Multiple Services</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="lawnSize">Approximate Lawn Size</label>
+              <select id="lawnSize" name="lawnSize">
+                <option value="" disabled selected>Select size...</option>
+                <option value="small">Small (under 1/4 acre)</option>
+                <option value="medium">Medium (1/4 – 1/2 acre)</option>
+                <option value="large">Large (1/2 – 1 acre)</option>
+                <option value="xlarge">Extra Large (1+ acre)</option>
+                <option value="unsure">Not sure</option>
+              </select>
+            </div>
+          </div>
 
-        <label for="images">Upload Images</label>
-        <input type="file" id="images" name="images" multiple>
+          <div class="form-group">
+            <label for="description">Project Description</label>
+            <textarea id="description" name="description" placeholder="Tell us a little about what you're looking for. The more detail, the better!"></textarea>
+          </div>
 
-        <button type="submit">Submit Quote Request</button>
-      </form>
+          <div class="form-group">
+            <label for="preferredDate">Preferred Start Date</label>
+            <input type="date" id="preferredDate" name="preferredDate" />
+          </div>
 
-      <div id="formMessage" class="message"></div>
-    </section>
-  </main>
+          <div class="form-group">
+            <label>Project Photos (optional)</label>
+            <div class="file-upload-area" id="fileUploadArea">
+              <input type="file" id="projectImages" name="projectImages" accept="image/*" multiple />
+              <div class="file-upload-icon">📷</div>
+              <div class="file-upload-text">
+                <span>Click to upload</span> or drag & drop photos of your project area
+              </div>
+              <div style="font-size:0.78rem; color:var(--charcoal-light); margin-top:6px;">JPG, PNG, HEIC up to 10MB each</div>
+            </div>
+          </div>
 
-  <script src="/static/js/main.js"></script>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Submit Quote Request</button>
+          </div>
+
+          <div class="form-message" id="formMessage"></div>
+
+        </form>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="quote-sidebar">
+        <div class="quote-info-box">
+          <h3>📞 Prefer to Call?</h3>
+          <div class="quote-contact-item">
+            <div class="quote-contact-icon">📞</div>
+            <div>
+              <div class="quote-contact-label">Phone / Text</div>
+              <a href="tel:2484123767" class="quote-contact-value">248-412-3767</a>
+            </div>
+          </div>
+          <div class="quote-contact-item">
+            <div class="quote-contact-icon">✉️</div>
+            <div>
+              <div class="quote-contact-label">Email</div>
+              <a href="mailto:graytogreen.services@gmail.com" class="quote-contact-value" style="font-size:0.85rem;">graytogreen.services@gmail.com</a>
+            </div>
+          </div>
+          <div class="quote-contact-item">
+            <div class="quote-contact-icon">📍</div>
+            <div>
+              <div class="quote-contact-label">Service Area</div>
+              <div class="quote-contact-value">Metro Detroit, MI</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-info-box">
+          <h3>💬 What to Expect</h3>
+          <div style="display:flex; flex-direction:column; gap:16px; margin-top:8px;">
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <div style="width:28px; height:28px; border-radius:50%; background:var(--green); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex-shrink:0;">1</div>
+              <div>
+                <div style="font-weight:700; font-size:0.9rem; color:var(--white);">Submit Your Request</div>
+                <div style="font-size:0.82rem; color:var(--gray-text);">Fill out the form or give us a call.</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <div style="width:28px; height:28px; border-radius:50%; background:var(--green); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex-shrink:0;">2</div>
+              <div>
+                <div style="font-weight:700; font-size:0.9rem; color:var(--white);">We'll Reach Out</div>
+                <div style="font-size:0.82rem; color:var(--gray-text);">Usually within 24 hours to confirm details.</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <div style="width:28px; height:28px; border-radius:50%; background:var(--green); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex-shrink:0;">3</div>
+              <div>
+                <div style="font-weight:700; font-size:0.9rem; color:var(--white);">Free Estimate</div>
+                <div style="font-size:0.82rem; color:var(--gray-text);">We'll assess the job and give you a no-pressure quote.</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <div style="width:28px; height:28px; border-radius:50%; background:var(--green); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex-shrink:0;">4</div>
+              <div>
+                <div style="font-weight:700; font-size:0.9rem; color:var(--white);">Get It Done</div>
+                <div style="font-size:0.82rem; color:var(--gray-text);">Schedule at your convenience and we'll take care of the rest.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-info-box" style="text-align:center;">
+          <div style="font-size:2rem; margin-bottom:10px;">⭐⭐⭐⭐⭐</div>
+          <p style="color:var(--gray-text); font-size:0.88rem; margin-bottom:16px;">
+            "Showed up on time, did amazing work, and the price was fair. Highly recommend!"
+          </p>
+          <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="btn btn-ghost" style="width:100%; font-size:0.85rem;">See Our Google Reviews</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Gray to <span>Green</span></h3>
+        <p>Professional landscaping services for homes and businesses across Metro Detroit. Reliable, affordable, and always on time.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/graytogreenlandscaping" target="_blank" class="social-link">📸</a>
+          <a href="https://www.facebook.com/share/1DL8rRZTFi/" target="_blank" class="social-link">📘</a>
+          <a href="https://www.tiktok.com/@graytogreenlandscaping" target="_blank" class="social-link">🎵</a>
+          <a href="https://g.page/r/10eyR3NRwzQavEArj" target="_blank" class="social-link">⭐</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Mulch Installation</a></li>
+          <li><a href="services.html">Lawn Care</a></li>
+          <li><a href="services.html">Landscape Design</a></li>
+          <li><a href="services.html">Hardscaping</a></li>
+          <li><a href="services.html">Tree & Shrub Trimming</a></li>
+          <li><a href="services.html">Clean-Ups</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2484123767">📞 248-412-3767</a></li>
+          <li><a href="mailto:graytogreen.services@gmail.com">✉️ Email Us</a></li>
+          <li><a href="quote.html">📋 Free Quote</a></li>
+          <li><a href="gallery.html">🖼 Our Work</a></li>
+          <li><a href="contact.html">📍 Service Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="green">Gray to Green Landscaping</span>. All rights reserved.</p>
+      <p>Serving Metro Detroit, MI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/main.js"></script>
 </body>
 </html>

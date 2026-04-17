@@ -1,2 +1,16 @@
-runtime: python311
+runtime: python312
+
 entrypoint: gunicorn -b :$PORT app.main:app
+
+env_variables:
+  FLASK_ENV: production
+  GCS_BUCKET: gray-to-green-uploads
+  GOOGLE_CALENDAR_ID: cnelsoncramer@gmail.com
+  GOOGLE_APPLICATION_CREDENTIALS: service_account.json
+
+handlers:
+  - url: /static
+    static_dir: app/static
+
+  - url: /.*
+    script: auto
