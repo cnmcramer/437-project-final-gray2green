@@ -1289,3 +1289,10 @@ footer {
   .social-grid { grid-template-columns: 1fr; }
   .quote-form-wrap { padding: 28px 20px; }
 }
+
+/* ─── NAV & HERO FIXES ─── */
+.nav-logo .nav-gray { color: #888888; }
+.hero h1 .gray-word { color: #7a7a7a !important; }
+.nav-phone { color: var(--white) !important; font-size: 0.95rem !important; }
+.nav-logo { font-size: 1.6rem !important; }
+.nav-cta { gap: 20px !important; }

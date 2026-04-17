@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── GALLERY LOAD ───
   const galleryGrid = document.getElementById('galleryGrid');
-  if (galleryGrid) {
+  if (galleryGrid && galleryGrid.children.length === 0) {
     loadGallery(galleryGrid);
   }
 

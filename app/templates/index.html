@@ -14,7 +14,7 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       <span class="nav-logo-leaf">🌿</span>
-      Gray <span>&nbsp;to Green</span>
+      <span class="nav-gray">Gray</span>&nbsp;to&nbsp;<span>Green</span>
     </a>
     <ul class="nav-links">
       <li><a href="/" class="active">Home</a></li>
@@ -114,8 +114,7 @@
     <p class="section-subtitle">
       From full landscape transformations to routine maintenance — we do it all, and we do it right.
     </p>
-    <div class="services-grid" id="servicesPreview">
-      <!-- Loaded dynamically from /api/services or JS fallback -->
+    <div class="services-grid">
       <div class="service-card">
         <span class="service-icon">🍂</span>
         <h3>Mulch Installation</h3>
@@ -212,47 +211,43 @@
   </div>
 </section>
 
-<!-- ═══ GALLERY PREVIEW ═══ -->
+<!-- ═══ GALLERY PREVIEW — real photos ═══ -->
 <section class="section gallery-preview">
   <div class="container">
     <div class="section-title">Our Work</div>
     <p class="section-subtitle">Real before & after results from Metro Detroit properties.</p>
     <div class="gallery-grid-preview">
+
+      <!-- Large left: paver patio (most impressive) -->
       <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Mulch & Rock Installation</div>
-        </div>
+        <img src="/static/images/g2g-tile1.jpeg" alt="Paver patio installation before and after" loading="lazy">
+        <div class="gallery-overlay"><span>Hardscaping — Paver Patio</span></div>
+      </div>
+
+      <!-- Top middle: arborvitae mulch bed -->
+      <div class="gallery-item">
+        <img src="/static/images/g2g-mulch4.jpeg" alt="Arborvitae row mulch bed" loading="lazy">
         <div class="gallery-overlay"><span>Mulch Installation</span></div>
       </div>
+
+      <!-- Top right: flower bed design -->
       <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Landscape Design</div>
-        </div>
+        <img src="/static/images/g2g-weedwork-3.jpeg" alt="Flower bed design with rock border" loading="lazy">
         <div class="gallery-overlay"><span>Landscape Design</span></div>
       </div>
+
+      <!-- Bottom middle: rock border & mulch -->
       <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Hardscaping</div>
-        </div>
-        <div class="gallery-overlay"><span>Hardscaping</span></div>
+        <img src="/static/images/g2g-mulch3.jpeg" alt="Rock border and mulch side bed" loading="lazy">
+        <div class="gallery-overlay"><span>Mulch & Rock Installation</span></div>
       </div>
+
+      <!-- Bottom right: weed removal -->
       <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Spring Clean-Up</div>
-        </div>
-        <div class="gallery-overlay"><span>Spring Clean-Up</span></div>
+        <img src="/static/images/g2g-mulch-weed-1.jpeg" alt="Side house weed removal and mulch" loading="lazy">
+        <div class="gallery-overlay"><span>Weed Removal & Clean-Up</span></div>
       </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Tree Trimming</div>
-        </div>
-        <div class="gallery-overlay"><span>Tree Trimming</span></div>
-      </div>
+
     </div>
     <div class="gallery-cta">
       <a href="/gallery" class="btn btn-outline">See Full Gallery</a>
