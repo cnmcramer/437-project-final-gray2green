@@ -1,10 +1,8 @@
-"""
-Gray to Green Landscaping — Flask App Entry Point
-app/main.py
-"""
-
-from flask import Flask, send_from_directory
+import sys
 import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from flask import Flask, render_template
 
 def create_app():
     app = Flask(
@@ -13,7 +11,6 @@ def create_app():
         static_folder='static',
     )
 
-    # ── Register route blueprints ──────────────────────────────────────
     from app.routes.services import services_bp
     from app.routes.gallery import gallery_bp
     from app.routes.quotes import quotes_bp
@@ -23,9 +20,6 @@ def create_app():
     app.register_blueprint(gallery_bp)
     app.register_blueprint(quotes_bp)
     app.register_blueprint(appointments_bp)
-
-    # ── Serve HTML pages ───────────────────────────────────────────────
-    from flask import render_template
 
     @app.route('/')
     def index():
@@ -48,7 +42,6 @@ def create_app():
         return render_template('contact.html')
 
     return app
-
 
 app = create_app()
 

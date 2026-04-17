@@ -4,44 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery — Gray to Green Landscaping</title>
-  <meta name="description" content="See real before & after landscaping projects by Gray to Green in Metro Detroit — mulch, hardscaping, lawn care, landscape design, and more." />
-  <link rel="stylesheet" href="static/css/style.css" />
+  <meta name="description" content="Real before & after landscaping projects by Gray to Green in Metro Detroit." />
+  <link rel="stylesheet" href="/static/css/style.css" />
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
+    <a href="/" class="nav-logo">
       <span class="nav-logo-leaf">🌿</span>
       Gray <span>&nbsp;to Green</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="quote.html">Get a Quote</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/gallery" class="active">Gallery</a></li>
+      <li><a href="/quote">Get a Quote</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
       <a href="tel:2484123767" class="nav-phone">📞 248-412-3767</a>
-      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+      <a href="/quote" class="btn btn-primary">Free Quote</a>
     </div>
     <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="quote.html">Get a Quote</a>
-    <a href="contact.html">Contact</a>
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/quote">Get a Quote</a>
+    <a href="/contact">Contact</a>
     <a href="tel:2484123767">📞 248-412-3767</a>
   </div>
 </nav>
 
-<!-- ═══ PAGE HEADER ═══ -->
 <div class="page-header">
   <div class="container">
     <h1>Our Work</h1>
@@ -49,126 +47,146 @@
   </div>
 </div>
 
-<!-- ═══ GALLERY ═══ -->
 <section class="section gallery-full">
   <div class="container">
 
-    <!-- Filter bar -->
     <div class="gallery-filter">
       <button class="filter-btn active" data-filter="all">All Projects</button>
       <button class="filter-btn" data-filter="mulch">Mulch</button>
-      <button class="filter-btn" data-filter="design">Landscape Design</button>
+      <button class="filter-btn" data-filter="cleanup">Weed & Clean-Up</button>
       <button class="filter-btn" data-filter="hardscape">Hardscaping</button>
-      <button class="filter-btn" data-filter="cleanup">Clean-Ups</button>
-      <button class="filter-btn" data-filter="trimming">Trimming</button>
+      <button class="filter-btn" data-filter="design">Landscape Design</button>
     </div>
 
-    <!-- Gallery masonry grid — loaded by JS from /api/gallery, falls back to placeholders -->
     <div class="gallery-masonry" id="galleryGrid">
 
-      <!-- Static placeholders — will be replaced by JS if API is available -->
+      <!-- 1: g2g-mulch1 — backyard tree bed mulch -->
       <div class="gallery-masonry-item" data-category="mulch">
         <span class="before-after-badge">Before & After</span>
-        <div class="gallery-placeholder" style="height:280px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Mulch Installation</div>
-        </div>
+        <img src="/static/images/g2g-mulch1.jpeg" alt="Backyard tree bed mulch installation" loading="lazy">
         <div class="gallery-label">
           <div class="gallery-label-tag">Mulch Installation</div>
-          <div class="gallery-label-title">Front Bed Mulch & Rock Border</div>
+          <div class="gallery-label-title">Backyard Tree Bed Transformation</div>
         </div>
       </div>
 
-      <div class="gallery-masonry-item" data-category="design">
+      <!-- 2: g2g-weedwork1 — large tree weed clearing -->
+      <div class="gallery-masonry-item" data-category="cleanup">
         <span class="before-after-badge">Before & After</span>
-        <div class="gallery-placeholder" style="height:200px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Landscape Design</div>
-        </div>
+        <img src="/static/images/g2g-weedwork1.jpeg" alt="Large tree area weed removal" loading="lazy">
         <div class="gallery-label">
-          <div class="gallery-label-tag">Landscape Design</div>
-          <div class="gallery-label-title">Flower Bed Refresh</div>
+          <div class="gallery-label-tag">Weed & Clean-Up</div>
+          <div class="gallery-label-title">Large Tree Area Weed Removal</div>
         </div>
       </div>
 
+      <!-- 3: g2g-tile1 — paver patio install -->
       <div class="gallery-masonry-item" data-category="hardscape">
         <span class="before-after-badge">Before & After</span>
-        <div class="gallery-placeholder" style="height:320px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Hardscaping</div>
-        </div>
+        <img src="/static/images/g2g-tile1.jpeg" alt="Paver patio installation" loading="lazy">
         <div class="gallery-label">
           <div class="gallery-label-tag">Hardscaping</div>
           <div class="gallery-label-title">Paver Patio Installation</div>
         </div>
       </div>
 
+      <!-- 4: g2g-mulch-weed-2 — curved bed mulch & edging -->
       <div class="gallery-masonry-item" data-category="mulch">
         <span class="before-after-badge">Before & After</span>
-        <div class="gallery-placeholder" style="height:240px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Mulch Installation</div>
-        </div>
+        <img src="/static/images/g2g-mulch-weed-2.jpeg" alt="Curved garden bed mulch and edging" loading="lazy">
         <div class="gallery-label">
           <div class="gallery-label-tag">Mulch Installation</div>
-          <div class="gallery-label-title">Tree Line Mulch Bed</div>
+          <div class="gallery-label-title">Curved Bed Mulch & Edging</div>
         </div>
       </div>
 
-      <div class="gallery-masonry-item" data-category="cleanup">
-        <div class="gallery-placeholder" style="height:200px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Spring Clean-Up</div>
-        </div>
+      <!-- 5: g2g-mulch5 — front yard tree ring mulch -->
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-mulch5.jpeg" alt="Front yard tree ring mulch bed" loading="lazy">
         <div class="gallery-label">
-          <div class="gallery-label-tag">Clean-Up</div>
-          <div class="gallery-label-title">Spring Yard Cleanup</div>
+          <div class="gallery-label-tag">Mulch Installation</div>
+          <div class="gallery-label-title">Front Yard Tree Ring Mulch</div>
         </div>
       </div>
 
+      <!-- 6: g2g-mulch4 — arborvitae row mulch bed -->
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-mulch4.jpeg" alt="Arborvitae row mulch bed installation" loading="lazy">
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Mulch Installation</div>
+          <div class="gallery-label-title">Arborvitae Row Mulch Bed</div>
+        </div>
+      </div>
+
+      <!-- 7: g2g-mulch3 — rock border & mulch side bed -->
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-mulch3.jpeg" alt="Rock border and mulch side bed" loading="lazy">
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Mulch & Rock Installation</div>
+          <div class="gallery-label-title">Rock Border & Mulch Side Bed</div>
+        </div>
+      </div>
+
+      <!-- 8: g2g-mulch2 — front foundation shrub bed mulch -->
+      <div class="gallery-masonry-item" data-category="mulch">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-mulch2.jpeg" alt="Front foundation shrub bed mulch" loading="lazy">
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Mulch Installation</div>
+          <div class="gallery-label-title">Front Foundation Shrub Bed</div>
+        </div>
+      </div>
+
+      <!-- 9: g2g-mulch-weed-1 — side house weed removal & mulch -->
+      <div class="gallery-masonry-item" data-category="cleanup">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-mulch-weed-1.jpeg" alt="Side house weed removal and mulch" loading="lazy">
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Weed & Clean-Up</div>
+          <div class="gallery-label-title">Side House Weed Removal & Mulch</div>
+        </div>
+      </div>
+
+      <!-- 10: g2g-weedwork-4 — overgrown walkway cleanup & design -->
       <div class="gallery-masonry-item" data-category="design">
         <span class="before-after-badge">Before & After</span>
-        <div class="gallery-placeholder" style="height:260px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Landscape Design</div>
-        </div>
+        <img src="/static/images/g2g-weedwork-4.jpeg" alt="Overgrown walkway bed cleanup and redesign" loading="lazy">
         <div class="gallery-label">
           <div class="gallery-label-tag">Landscape Design</div>
-          <div class="gallery-label-title">Front Bed Redesign</div>
+          <div class="gallery-label-title">Walkway Bed Cleanup & Redesign</div>
         </div>
       </div>
 
-      <div class="gallery-masonry-item" data-category="trimming">
-        <div class="gallery-placeholder" style="height:220px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Shrub Trimming</div>
-        </div>
-        <div class="gallery-label">
-          <div class="gallery-label-tag">Trimming</div>
-          <div class="gallery-label-title">Shrub Shaping & Edging</div>
-        </div>
-      </div>
-
-      <div class="gallery-masonry-item" data-category="hardscape">
-        <div class="gallery-placeholder" style="height:200px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Rock Installation</div>
-        </div>
-        <div class="gallery-label">
-          <div class="gallery-label-tag">Rock Installation</div>
-          <div class="gallery-label-title">Walkway & Stone Border</div>
-        </div>
-      </div>
-
-      <div class="gallery-masonry-item" data-category="mulch">
+      <!-- 11: g2g-weedwork-3 — flower bed design with rock border -->
+      <div class="gallery-masonry-item" data-category="design">
         <span class="before-after-badge">Before & After</span>
-        <div class="gallery-placeholder" style="height:300px;">
-          <div class="gallery-placeholder-icon">📷</div>
-          <div class="gallery-placeholder-label">Mulch Installation</div>
-        </div>
+        <img src="/static/images/g2g-weedwork-3.jpeg" alt="Flower bed design with rock border" loading="lazy">
         <div class="gallery-label">
-          <div class="gallery-label-tag">Mulch Installation</div>
-          <div class="gallery-label-title">Side Yard Bed Overhaul</div>
+          <div class="gallery-label-tag">Landscape Design</div>
+          <div class="gallery-label-title">Flower Bed Design & Rock Border</div>
+        </div>
+      </div>
+
+      <!-- 12: g2g-weedwork-2 — front bed weed removal & mulch -->
+      <div class="gallery-masonry-item" data-category="cleanup">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-weedwork-2.jpeg" alt="Front bed weed removal and mulch refresh" loading="lazy">
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Weed & Clean-Up</div>
+          <div class="gallery-label-title">Front Bed Weed Removal & Mulch</div>
+        </div>
+      </div>
+
+      <!-- 13: g2g-tile-weeds-1 — overgrown bed cleared & mulched with stepping stones -->
+      <div class="gallery-masonry-item" data-category="design">
+        <span class="before-after-badge">Before & After</span>
+        <img src="/static/images/g2g-tile-weeds-1.jpeg" alt="Overgrown bed cleared and redesigned with stepping stones" loading="lazy">
+        <div class="gallery-label">
+          <div class="gallery-label-tag">Landscape Design</div>
+          <div class="gallery-label-title">Overgrown Bed Cleared & Redesigned</div>
         </div>
       </div>
 
@@ -178,12 +196,11 @@
       <p style="color:var(--gray-text); margin-bottom:20px;">
         Want results like these? We'd love to help with your project.
       </p>
-      <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+      <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
     <div class="footer-top">
@@ -200,12 +217,12 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">Mulch Installation</a></li>
-          <li><a href="services.html">Lawn Care</a></li>
-          <li><a href="services.html">Landscape Design</a></li>
-          <li><a href="services.html">Hardscaping</a></li>
-          <li><a href="services.html">Tree & Shrub Trimming</a></li>
-          <li><a href="services.html">Clean-Ups</a></li>
+          <li><a href="/services">Mulch Installation</a></li>
+          <li><a href="/services">Lawn Care</a></li>
+          <li><a href="/services">Landscape Design</a></li>
+          <li><a href="/services">Hardscaping</a></li>
+          <li><a href="/services">Tree & Shrub Trimming</a></li>
+          <li><a href="/services">Clean-Ups</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -213,9 +230,9 @@
         <ul>
           <li><a href="tel:2484123767">📞 248-412-3767</a></li>
           <li><a href="mailto:graytogreen.services@gmail.com">✉️ Email Us</a></li>
-          <li><a href="quote.html">📋 Free Quote</a></li>
-          <li><a href="gallery.html">🖼 Our Work</a></li>
-          <li><a href="contact.html">📍 Service Area</a></li>
+          <li><a href="/quote">📋 Free Quote</a></li>
+          <li><a href="/gallery">🖼 Our Work</a></li>
+          <li><a href="/contact">📍 Service Area</a></li>
         </ul>
       </div>
     </div>
@@ -226,6 +243,6 @@
   </div>
 </footer>
 
-<script src="static/js/main.js"></script>
+<script src="/static/js/main.js"></script>
 </body>
 </html>
