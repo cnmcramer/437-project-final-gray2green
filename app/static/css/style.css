@@ -163,12 +163,14 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 10px;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   color: var(--white);
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .nav-logo span { color: var(--green-light); }
+.nav-logo .nav-gray { color: #888888; }
 
 .nav-logo-leaf {
   font-size: 1.5rem;
@@ -214,13 +216,15 @@ h1, h2, h3, h4 {
 .nav-cta {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+  margin-left: 24px;
 }
 
 .nav-phone {
-  color: var(--green-light);
+  color: var(--white);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 /* Mobile hamburger */
@@ -328,7 +332,7 @@ h1, h2, h3, h4 {
   line-height: 1.08;
 }
 
-.hero h1 .gray-word { color: var(--gray-text); }
+.hero h1 .gray-word { color: #888888; }
 .hero h1 .green-word { color: var(--green-light); }
 
 .hero-sub {
