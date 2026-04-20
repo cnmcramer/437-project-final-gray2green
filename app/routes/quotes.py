@@ -6,6 +6,7 @@ POST /api/quotes
 from flask import Blueprint, request, jsonify
 from app.services.firestore_service import save_quote_request
 from app.services.storage_service import upload_image
+from app.services.calendar_service import create_appointment_event
 
 quotes_bp = Blueprint('quotes', __name__)
 
@@ -44,6 +45,15 @@ def submit_quote():
 
         # ── Save to Firestore ──────────────────────────────────────────
         doc_id = save_quote_request(data)
+
+        # ── Create Google Calendar event ───────────────────────────────
+        try:
+            event_id = create_appointment_event(data)
+            print(f"[Calendar] Quote event created: {event_id}")
+        except Exception as cal_err:
+            import traceback
+            print(f"[Calendar] Event creation failed: {cal_err}")
+            print(traceback.format_exc())
 
         return jsonify({
             'success': True,

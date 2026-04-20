@@ -9,8 +9,9 @@ from datetime import datetime
 # Only import Firestore when running in a GCP environment
 try:
     from google.cloud import firestore
-    db = firestore.Client()
+    db = firestore.Client(project="project-final-gray2green")
     FIRESTORE_AVAILABLE = True
+    print("[Firestore] Connected successfully")
 except Exception as e:
     print(f"[Firestore] Not available (likely local dev): {e}")
     db = None
@@ -180,3 +181,20 @@ def save_gallery_image(data: dict) -> str:
     ref = db.collection(GALLERY_IMAGES).document()
     ref.set(data)
     return ref.id
+
+def save_quote_request(data: dict) -> str:
+    print(f"[Firestore] FIRESTORE_AVAILABLE={FIRESTORE_AVAILABLE}, db={db}")
+    if not FIRESTORE_AVAILABLE:
+        print("[Firestore] Skipping save (not available):", data)
+        return "local-dev-id"
+
+    try:
+        data['createdAt'] = datetime.utcnow()
+        data['status'] = 'new'
+        ref = db.collection(QUOTE_REQUESTS).document()
+        ref.set(data)
+        print(f"[Firestore] Quote saved successfully: {ref.id}")
+        return ref.id
+    except Exception as e:
+        print(f"[Firestore] ERROR saving quote: {e}")
+        raise

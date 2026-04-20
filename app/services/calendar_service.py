@@ -7,47 +7,43 @@ import os
 from datetime import datetime, timedelta
 
 CALENDAR_ID = os.environ.get('GOOGLE_CALENDAR_ID', 'cnelsoncramer@gmail.com')
-SERVICE_ACCOUNT_FILE = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS', 'service_account.json')
-
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 try:
-    from google.oauth2 import service_account
+    import google.auth
     from googleapiclient.discovery import build
 
-    credentials = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE, scopes=SCOPES
-    )
+    credentials, project = google.auth.default(scopes=SCOPES)
     calendar_service = build('calendar', 'v3', credentials=credentials)
     CALENDAR_AVAILABLE = True
+    print("[Calendar] Connected successfully")
 except Exception as e:
-    print(f"[Calendar] Not available (likely local dev): {e}")
+    print(f"[Calendar] Not available: {e}")
     calendar_service = None
     CALENDAR_AVAILABLE = False
 
 
 def create_appointment_event(appointment: dict) -> str:
-    """
-    Create a Google Calendar event for an appointment.
-    Returns the event ID, or a placeholder if Calendar is not configured.
-
-    appointment dict fields:
-        fullName, phone, email, address,
-        serviceId, appointmentDate (YYYY-MM-DD),
-        appointmentTime (e.g. '10:00 AM'), notes
-    """
     if not CALENDAR_AVAILABLE:
         print(f"[Calendar] Skipping event creation for: {appointment.get('fullName')}")
         return "local-dev-event-id"
 
     # Parse date + time
-    date_str = appointment.get('appointmentDate', '')
+    date_str = appointment.get('appointmentDate') or appointment.get('preferredDate', '')
     time_str = appointment.get('appointmentTime', '9:00 AM')
 
+    # If no date provided, default to tomorrows
+
+    if not date_str:
+        date_str = (datetime.utcnow() + timedelta(days=1)).strftime('%Y-%m-%d')
+
     try:
-        dt_start = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %I:%M %p")
+        dt_start = datetime.strptime(f"{date_str} {time_str}".strip(), "%Y-%m-%d %I:%M %p")
     except ValueError:
-        dt_start = datetime.strptime(date_str, "%Y-%m-%d")
+        try:
+            dt_start = datetime.strptime(date_str.strip(), "%Y-%m-%d")
+        except ValueError:
+            dt_start = datetime.utcnow()
 
     dt_end = dt_start + timedelta(hours=2)  # Default 2-hour block
 
