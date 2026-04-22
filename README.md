@@ -3,7 +3,7 @@
 > Cloud Computing final project (437) — Full-stack landscaping website using 4 Google Cloud services.
 
 ## Live Site
-Deployed on Google App Engine: `https://<project-id>.appspot.com`
+Deployed on Google App Engine: `https://project-final-gray2green.uc.r.appspot.com/`
 
 ---
 
@@ -14,6 +14,11 @@ A working prototype website for **Gray to Green**, a Metro Detroit landscaping c
 - Browse a gallery of completed projects
 - Submit a quote request (with optional image upload)
 - Schedule an appointment (auto-added to Google Calendar)
+
+- **App Engine** hosts the Flask web app and handles all incoming HTTP requests, every page load and form submission runs through it.
+- **Firestore** is the database, storing quote requests, appointment records, service listings, and gallery image metadata.
+- **Cloud Storage** holds the actual image files customers upload with their quote requests, with the resulting file URL saved back into Firestore.
+- **Google Calendar API** turns appointment form submissions into real calendar events, giving the business owner a usable schedule entry for every booking.
 
 ---
 
@@ -115,11 +120,9 @@ See `docs/deployment-notes.md` for full setup instructions.
 
 ---
 
-## Git Branches
+## Disclaimer
 
-- `frontend-caleb` — HTML/CSS/JS (Caleb)
-- `backend` — Flask/Firestore/APIs (Gabe)
-- `main` — Stable merged code
+*This code was created with the assistance of Claude, an AI assistant made by Anthropic. All code has been reviewed and tested for correctness.*
 
 ---
 
